@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>news</title>
+<link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header_logo">News</div>
+        <div class="header_contactUs">Contact Us</div>
+    </header>
+
+<div class="wrapper">
+    <div class="news">
+<%articles.forEach(function(article,index){%>
+    <div class="news_card">
+          <h1><%=article.title%></h1>  
+          <img src="<%=article.imageUrl%>">
+          <p><%=article.summary%></p>
+          <a href="<%=article.url%>">for more</a>
+          <h6>Published At:<%=article.publishedAt%></h6>
+    </div>
+<% }) %>
+    </div>
+</div>
+
+
+</body>
+</html>
